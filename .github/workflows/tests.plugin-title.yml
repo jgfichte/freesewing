@@ -34,6 +34,10 @@ jobs:
         run: cd packages/ && npm install
         env:
           CI: true
+      - name: Install dependencies in plugin folder
+        run: cd packages/plugin-title && npm install
+        env:
+          CI: true
       - name: Install peer & test dependencies
         run: "cd packages/plugin-title && npm install  mocha chai"
         env:
